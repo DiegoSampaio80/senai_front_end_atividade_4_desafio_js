@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Atividade 04 - Desafio JS</title>
+</head>
+<body>
+
+    <script>
+        
+        var voltar = 15;
+        while (voltar == 15) {
+
+            var desafio = Number(prompt('Escolha um desafio: \n' +
+                '1 - Alert: "Bem-vindo ao Mundo JavaScript;"\n' +
+                '2 - Alert: "Qual é o seu nome?;"\n' +
+                '3 - Alert: Página: "e: 202";\n' +
+                '4 - Alert: Página: "g: 22";\n' +
+                '5 - Alert: Concatenação;\n' +
+                '6 - Alert: Calcular o dobro;\n' +
+                '7 - Alert: Soma de dois números\n'+
+                '8 - Alert: Valor do jantar;\n'+
+                '9 - Alert: Cálculo de horas/dia;\n'+
+                '10 - Alert: Números vizinhos;\n'+
+                '11 - Alert: Divisão da conta por cliente;\n' +
+                '12 - Alert: Parcelamento e desconto;\n' +
+                '13 - Alert: Média entre duas notas;\n' +
+                '14 - Encerrar.'
+            ));
+            // alert(desafio);
+
+
+            if (desafio == 1) {
+                alert("Bem-vindo ao Mundo JavaScript");
+            } else if (desafio == 2) {
+                var nome = prompt("Qual é o seu nome?");
+                alert('Olá ' + nome);
+            } else if (desafio == 3) {
+                var a = prompt("Informe um número:");
+                var opcao = prompt('1 - Multiplicação;\n' +
+                    '2 - Divisão;\n' +
+                    '3 - Subtração;\n' +
+                    '4 - Concatenação;\n');
+                if (opcao == 1) {
+                    Number(a) * 2;
+                    alert("b: " + opcao);
+                } else if (opcao == 2) {
+                    Number(a) / 2;
+                    alert("c: " + opcao);
+                } else if (opcao == 3) {
+                    Number(a) - 2;
+                    alert("d: " + opcao);
+                } else if (opcao == 4) {
+
+                    alert("e: " + (a + 2));
+                } else {
+                    alert('Escolha uma opção válida.');
+                }
+            } else if (desafio == 4) {
+                var a = prompt("Informe um número:");
+                var opcao = prompt('1 - Multiplicação;\n' +
+                    '2 - Divisão;\n' +
+                    '3 - Subtração;\n' +
+                    '4 - Concatenação;\n' +
+                    '5 - Alert prompt;\n' +
+                    '6 - Soma;\n');
+                if (opcao == 1) {
+                    alert("b: " + Number(a) * 2);
+                } else if (opcao == 2) {
+                    alert("c: " + Number(a) / 2);
+                } else if (opcao == 3) {
+                    alert("d: " + Number(a) - 2);
+                } else if (opcao == 4) {
+                    alert("e: " + (a + 2));
+                } else if (opcao == 5) {
+                    var f = Number(a);
+                    alert("f: " + f);
+                } else if (opcao == 6) {
+                    var f = Number(a);
+                    alert("g: " + (f + 2));
+                } else {
+                    alert('Digite uma opção válida.');
+                }
+            } else if (desafio == 5) {
+                var fruta = prompt('Digite uma fruta');
+                var preco = prompt('Digite o preço');
+                var decisao = prompt('Levar ou deixar?');
+                var novovalor = prompt('Digite o novo valor');
+                alert(fruta + ', R$ ' + preco + ', ' + decisao + ' e ' + novovalor + '.');
+            } else if (desafio == 6) {
+                var n1 = prompt('Digite um número');
+                alert('O dobro é: ' + (n1 * 2));
+            } else if (desafio == 7) {
+                var n2 = Number(prompt('Digite o primeiro número'));
+                var n3 = Number(prompt('Digite o segundo número'));
+                alert('A soma é: ' + (n2 + n3));
+            } else if (desafio == 8) {
+                var vlrJantar = Number(prompt('Digite o valor do jantar'));
+                alert('Taxa do garçon R$: ' + (vlrJantar * 0.10).toFixed(2) + "\n" +
+                    'Total R$: ' + (vlrJantar + (vlrJantar * 0.10)).toFixed(2));
+            } else if (desafio == 9) {
+                var dias = Number(prompt('Número de dias'));
+                // var horas = Number(prompt('Número de horas'));
+                var totalHoras = dias * 24;
+                alert('Total de horas: ' + totalHoras);
+            } else if (desafio == 10) {
+                var n4 = Number(prompt('Digite um número'));
+                var anterior = n4 - 1;
+                var posterior = n4 + 1;
+                alert('Vizinhos: ' + anterior + ' e ' + posterior + '.');
+            } else if (desafio == 11) {
+                var n5 = Number(prompt('Informe o total da conta R$: '));
+                var n6 = Number(prompt('Informe o total de clientes'));
+                var divisao = n5 / n6;
+                alert('Valor por cliente R$: ' + divisao);
+            } else if (desafio == 12) {
+                var preco = Number(prompt('Preço R$: '));
+                var desconto = preco - (preco * 0.10);
+                var parcela = preco / 3;
+                alert('Á vista R$: ' + (desconto).toFixed(2) + '\n' +
+                    'Ou 3x de R$: ' + (parcela).toFixed(2));
+            } else if (desafio == 13) {
+                var n7 = Number(prompt('1ª nota'));
+                var n8 = Number(prompt('2ª nota'));
+                var media = (n7 + n8) / 2;
+                alert('Média: ' + media);
+            } else if (desafio == 14) {
+                break;
+            } else {
+                alert('Digite uma opção válida.');
+            }
+            voltar = Number(prompt('14 - Encerrar;\n'+
+                '15 - Voltar'));
+        }
+    </script>
+
+</body>
+</html>
